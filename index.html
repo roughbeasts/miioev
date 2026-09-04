@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Miio EV Charging App — Read This Before You Download</title>
+<style>
+  :root {
+    --bg: #14100e;
+    --panel: #1c1613;
+    --accent: #e8542a;
+    --accent-dim: #a83f20;
+    --text: #f2ece5;
+    --muted: #b8ab9e;
+    --line: #34291f;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    line-height: 1.55;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 48px 24px 80px; }
+  header {
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 24px;
+    margin-bottom: 32px;
+  }
+  .tag {
+    display: inline-block;
+    background: var(--accent);
+    color: #14100e;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 3px;
+    margin-bottom: 16px;
+  }
+  h1 {
+    font-size: clamp(28px, 5vw, 42px);
+    line-height: 1.15;
+    margin: 0 0 12px;
+  }
+  .sub {
+    color: var(--muted);
+    font-size: 17px;
+    max-width: 60ch;
+  }
+  h2 {
+    font-size: 20px;
+    color: var(--accent);
+    border-left: 3px solid var(--accent);
+    padding-left: 12px;
+    margin: 40px 0 16px;
+  }
+  .card {
+    position: relative;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--accent-dim);
+    border-radius: 8px;
+    padding: 20px 22px 20px 56px;
+    margin-bottom: 14px;
+    box-shadow: 0 0 0 rgba(232,84,42,0);
+    transition: box-shadow 0.2s ease;
+  }
+  .card:hover {
+    box-shadow: 0 0 22px rgba(232,84,42,0.12);
+    border-left-color: var(--accent);
+  }
+  .card-icon {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    width: 26px;
+    height: 26px;
+    color: var(--accent);
+    opacity: 0.9;
+  }
+  .card-icon svg { width: 100%; height: 100%; }
+  .quote-mark {
+    position: absolute;
+    top: 12px;
+    left: 20px;
+    font-size: 46px;
+    line-height: 1;
+    font-family: Georgia, serif;
+    color: var(--accent-dim);
+    opacity: 0.55;
+    user-select: none;
+  }
+  .card p { margin: 0; color: var(--text); }
+  .card .src {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 12px;
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .src svg { width: 13px; height: 13px; flex-shrink: 0; opacity: 0.8; }
+  .section-title-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .section-title-row svg { width: 22px; height: 22px; color: var(--accent); flex-shrink: 0; }
+  @keyframes pulse-warn {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.55; }
+  }
+  .danger-icon {
+    animation: pulse-warn 1.8s ease-in-out infinite;
+  }
+  .flag {
+    background: #241a12;
+    border: 1px solid var(--accent-dim);
+    border-radius: 8px;
+    padding: 18px 20px;
+    margin: 24px 0;
+  }
+  .flag strong { color: var(--accent); }
+  ul { padding-left: 20px; }
+  li { margin-bottom: 10px; }
+  .cta {
+    margin-top: 44px;
+    padding: 24px;
+    background: var(--panel);
+    border-radius: 8px;
+    border: 1px solid var(--line);
+    text-align: center;
+  }
+  .cta a {
+    display: inline-block;
+    margin-top: 12px;
+    background: var(--accent);
+    color: #14100e;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 12px 22px;
+    border-radius: 6px;
+  }
+  footer {
+    margin-top: 60px;
+    color: var(--muted);
+    font-size: 13px;
+    border-top: 1px solid var(--line);
+    padding-top: 20px;
+  }
+  code { color: var(--accent); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <span class="tag">Consumer warning</span>
+    <h1>Before you download the Miio EV charging app — read the reviews first.</h1>
+    <p class="sub">Miio (used across Portugal, Spain, and France) has a documented pattern of complaints about non-refundable prepaid balances, billing for sessions that never actually charged, and unresponsive support — including a case where the Portuguese Consumer Authority couldn't get a refund issued.</p>
+  </header>
+
+  <h2>
+    <span class="section-title-row">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      What's actually documented
+    </span>
+  </h2>
+
+  <div class="card">
+    <span class="quote-mark">&#8220;</span>
+    <p>Miio doesn't charge per kWh at the point of use — it deducts from a prepaid "wallet." Users report that unused wallet funds are effectively non-refundable and can only be spent inside the app, even after the rental car or trip is long over.</p>
+    <span class="src">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+      Source: user complaint, travelinti.com (2025)
+    </span>
+  </div>
+
+  <div class="card">
+    <span class="card-icon danger-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></span>
+    <p>A user reported the app showed "not connected, not charging" for an entire session, tried for 40+ minutes to stop it through every method available, and was still invoiced for the session afterward. Miio's own support reportedly acknowledged similar cases from other users.</p>
+    <span class="src">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+      Source: App Store review, apps.apple.com/miio
+    </span>
+  </div>
+
+  <div class="card">
+    <span class="card-icon danger-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></span>
+    <p>A Trustpilot reviewer paid Miio to activate a charger that turned out to be non-functional, was told by Miio's own helpline they were aware of the fault, and received written agreement from Miio to refund the payment — which was never actually paid out. The Portuguese Consumer Authority contacted Miio on the customer's behalf and reportedly got no response either.</p>
+    <span class="src">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+      Source: Trustpilot review of miio.com
+    </span>
+  </div>
+
+  <div class="card">
+    <span class="quote-mark">&#8220;</span>
+    <p>Multiple reviewers describe being charged more than the energy actually delivered (one cites a charge of €12.50 for a session their car's own app measured at 7.7 kW), and describe support as effectively unreachable — invalid contact email, no resolution after hours of waiting.</p>
+    <span class="src">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+      Source: App Store &amp; justuseapp.com aggregated reviews
+    </span>
+  </div>
+
+  <div class="flag">
+    <span style="display:flex; gap:12px; align-items:flex-start;">
+      <svg class="danger-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:24px;height:24px;color:var(--accent);flex-shrink:0;margin-top:2px;"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+      <span><strong>On the "locks your car" concern:</strong> I couldn't independently verify that Miio specifically causes a car to become locked or undriveable. What is documented — including in Miio's own App Store changelog — is a pattern of "stuck cable" issues, where the charging cable itself won't release from the vehicle. This is a known failure mode across several EV charging apps (not unique to Miio) and is usually caused by a session the app thinks is still active, a communication glitch with the charging station, or a frozen/faulty latch — not necessarily the app deliberately locking anything. If you've experienced your car being immobilized rather than just a stuck cable, that's worth reporting directly, since it goes beyond what's publicly documented.</span>
+    </span>
+  </div>
+
+  <h2>If you're stuck with a cable that won't release</h2>
+  <ul>
+    <li>Confirm the session is actually stopped in the app — not just showing "not charging."</li>
+    <li>Try locking, then unlocking the car with the key fob (releases many stuck latches).</li>
+    <li>Check your vehicle's manual for the manual/emergency cable release, often in the trunk near the charge port.</li>
+    <li>Don't force the connector — it's a common way to damage the charge port itself.</li>
+  </ul>
+
+  <h2>If you've already lost money to Miio</h2>
+  <ul>
+    <li>Screenshot everything: the session, the charge, any support replies.</li>
+    <li>Dispute the charge with your card issuer/bank directly — this tends to get faster results than app support.</li>
+    <li>In Portugal, you can file with <strong>DECO</strong> (Associação Portuguesa para a Defesa do Consumidor) or the <strong>Direção-Geral do Consumidor</strong>.</li>
+    <li>Leave a dated, factual review (App Store, Google Play, Trustpilot) — it's part of what surfaced the pattern above.</li>
+  </ul>
+
+  <h2>Report the app to Apple / Google</h2>
+
+  <div class="card">
+    <p><strong>Apple App Store</strong> — reports go through Apple's dedicated problem-reporting site, separate from a normal review.</p>
+    <ol style="margin:12px 0 0; padding-left:20px; color:var(--text);">
+      <li>Go to <a href="https://reportaproblem.apple.com" style="color:var(--accent);" target="_blank" rel="noopener">reportaproblem.apple.com</a> and sign in with the Apple ID you used.</li>
+      <li>Click <strong>"I'd like to"</strong> and choose <strong>"Report a scam or fraud"</strong> (use "Report a quality issue" if you didn't lose money, just had a bad experience).</li>
+      <li>Select the Miio app from your purchase/download history, describe what happened, and submit.</li>
+      <li>If you also lost money on an in-app purchase (wallet top-up), you can separately choose <strong>"Request a refund"</strong> in the same "I'd like to" menu.</li>
+    </ol>
+    <span class="src">App listing: <a href="https://apps.apple.com/us/app/miio/id1462182013" style="color:var(--muted);" target="_blank" rel="noopener">apps.apple.com/miio</a> · Official guidance: <a href="https://support.apple.com/en-us/122712" style="color:var(--muted);" target="_blank" rel="noopener">support.apple.com/122712</a></span>
+  </div>
+
+  <div class="card">
+    <p><strong>Google Play Store</strong> — flagging is built into the app listing itself.</p>
+    <ol style="margin:12px 0 0; padding-left:20px; color:var(--text);">
+      <li>Open the Miio listing: <a href="https://play.google.com/store/apps/details?id=com.muvext.miio" style="color:var(--accent);" target="_blank" rel="noopener">play.google.com/store/apps/details?id=com.muvext.miio</a></li>
+      <li>Tap the <strong>three-dot menu (⋮)</strong> near the top of the listing.</li>
+      <li>Select <strong>"Flag as inappropriate."</strong></li>
+      <li>Choose the closest reason — <strong>"Harmful to device or data"</strong> if you believe there's a technical/security issue, or <strong>"Other objection"</strong> for billing/fraud complaints — and add details.</li>
+      <li>Submit. Google won't send an individual reply, but flags feed into their review process.</li>
+    </ol>
+    <span class="src">Official guidance: <a href="https://support.google.com/googleplay/answer/2853570" style="color:var(--muted);" target="_blank" rel="noopener">support.google.com/googleplay/answer/2853570</a></span>
+  </div>
+
+  <div class="card">
+    <p><strong>Also worth doing, in parallel:</strong></p>
+    <ul style="margin:8px 0 0;">
+      <li>Leave a dated, factual written review on the app's store page — reviews carry more public weight than a backend flag.</li>
+      <li>If you're in Portugal: file with <a href="https://www.livroreclamacoes.pt" style="color:var(--accent);" target="_blank" rel="noopener">Livro de Reclamações</a> or <a href="https://www.deco.proteste.pt" style="color:var(--accent);" target="_blank" rel="noopener">DECO</a>.</li>
+      <li>Dispute the charge directly with your card issuer — chargebacks tend to move faster than any app-store report.</li>
+    </ul>
+  </div>
+
+  <div class="cta">
+    <p>This page summarizes publicly available user reports as of September 2026. It isn't a legal filing or an official investigation — treat it as "read before you download," not a final verdict.</p>
+  </div>
+
+  <footer>
+    Compiled from public App Store, Google Play, and Trustpilot reviews. Not affiliated with Miio, MUVEXT LDA, or any charging network operator.
+  </footer>
+
+</div>
+</body>
+</html>
