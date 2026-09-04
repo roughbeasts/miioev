@@ -33,6 +33,38 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=IBM+Plex+Mono:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script>
+(function() {
+  var GA_ID = "G-4FJJEQBLDR";
+  var consent = localStorage.getItem("cookie_consent");
+  function loadGA() {
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=" + GA_ID;
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    window.gtag = gtag;
+    gtag("js", new Date());
+    gtag("config", GA_ID, { anonymize_ip: true });
+  }
+  if (consent === "accepted") { loadGA(); }
+  else if (consent === null) {
+    document.addEventListener("DOMContentLoaded", function() {
+      document.getElementById("cookie-banner").style.display = "flex";
+    });
+  }
+  window.acceptCookies = function() {
+    localStorage.setItem("cookie_consent", "accepted");
+    document.getElementById("cookie-banner").style.display = "none";
+    loadGA();
+  };
+  window.declineCookies = function() {
+    localStorage.setItem("cookie_consent", "declined");
+    document.getElementById("cookie-banner").style.display = "none";
+  };
+})();
+</script>
 <style>
   :root { --bg:#0a0908; --panel:#171310; --panel2:#1e1815; --hazard:#f5c400; --accent:#ff4a1c; --accent2:#ff8a3d; --text:#f3ede4; --muted:#a89988; --line:#332a22; --danger-red:#d81e1e; }
   * { box-sizing: border-box; }
@@ -73,9 +105,24 @@
   .cta { margin-top:56px; padding:26px 28px; background:var(--panel2); border:1px dashed var(--muted); font-family:'IBM Plex Mono',monospace; font-size:13px; color:var(--muted); }
   footer { margin-top:60px; color:var(--muted); font-size:12.5px; border-top:1px solid var(--line); padding-top:22px; font-family:'IBM Plex Mono',monospace; line-height:1.9; }
   footer a { color:var(--accent2); }
+  #cookie-banner { display:none; position:fixed; left:0; right:0; bottom:0; z-index:999; background:#0e0b09; border-top:2px solid var(--hazard); padding:16px 20px; align-items:center; justify-content:center; gap:20px; flex-wrap:wrap; font-family:'IBM Plex Mono',monospace; font-size:12.5px; color:var(--muted); box-shadow:0 -6px 24px rgba(0,0,0,0.4); }
+  #cookie-banner p { margin:0; max-width:52ch; color:var(--text); }
+  #cookie-banner a { color:var(--accent2); }
+  #cookie-banner .btns { display:flex; gap:10px; flex-shrink:0; }
+  #cookie-banner button { font-family:'IBM Plex Mono',monospace; font-size:12px; font-weight:700; letter-spacing:0.04em; padding:9px 16px; border-radius:4px; cursor:pointer; border:1px solid var(--line); }
+  #cookie-banner .accept { background:var(--hazard); color:#0a0908; border:none; }
+  #cookie-banner .decline { background:transparent; color:var(--muted); }
 </style>
 </head>
 <body>
+
+<div id="cookie-banner">
+  <p>Este sitio usa Google Analytics para entender el tráfico. No se recopila ningún dato hasta que aceptes. Consulta nuestro <a href="/privacy/">Aviso de Privacidad</a>.</p>
+  <div class="btns">
+    <button class="decline" onclick="declineCookies()">Rechazar</button>
+    <button class="accept" onclick="acceptCookies()">Aceptar</button>
+  </div>
+</div>
 
 <div class="ticker-wrap">
   <span class="ticker">CABLES DE RECARGA ATASCADOS &nbsp;·&nbsp; SALDO DE CARTERA NO REEMBOLSABLE &nbsp;·&nbsp; COBRADO POR SESIONES QUE NUNCA CARGARON &nbsp;·&nbsp; SOPORTE SIN RESPUESTA &nbsp;·&nbsp; AUTORIDAD DE CONSUMO IGNORADA &nbsp;·&nbsp; CABLES DE RECARGA ATASCADOS &nbsp;·&nbsp; SALDO DE CARTERA NO REEMBOLSABLE &nbsp;·&nbsp; COBRADO POR SESIONES QUE NUNCA CARGARON &nbsp;·&nbsp; SOPORTE SIN RESPUESTA &nbsp;·&nbsp;</span>
@@ -184,7 +231,7 @@
 
   <footer>
     Recopilado a partir de reseñas públicas de App Store, Google Play y Trustpilot. Sin afiliación con Miio, MUVEXT LDA, ni ningún operador de red de recarga.<br>
-    <a href="/privacy/">Aviso de Privacidad</a> · <a href="/legal/">Aviso Legal</a> (EN) · Sin cookies. Sin rastreo. Sin analítica.
+    <a href="/privacy/">Aviso de Privacidad</a> · <a href="/legal/">Aviso Legal</a> (EN) · <a href="#" onclick="localStorage.removeItem('cookie_consent'); location.reload(); return false;">Configuración de Cookies</a>
   </footer>
 
 </div>

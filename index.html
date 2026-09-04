@@ -50,6 +50,44 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=IBM+Plex+Mono:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+<!-- Cookie consent + Google Analytics (loads only after consent) -->
+<script>
+(function() {
+  var GA_ID = "G-4FJJEQBLDR";
+  var consent = localStorage.getItem("cookie_consent");
+
+  function loadGA() {
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=" + GA_ID;
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    window.gtag = gtag;
+    gtag("js", new Date());
+    gtag("config", GA_ID, { anonymize_ip: true });
+  }
+
+  if (consent === "accepted") {
+    loadGA();
+  } else if (consent === null) {
+    document.addEventListener("DOMContentLoaded", function() {
+      document.getElementById("cookie-banner").style.display = "flex";
+    });
+  }
+
+  window.acceptCookies = function() {
+    localStorage.setItem("cookie_consent", "accepted");
+    document.getElementById("cookie-banner").style.display = "none";
+    loadGA();
+  };
+  window.declineCookies = function() {
+    localStorage.setItem("cookie_consent", "declined");
+    document.getElementById("cookie-banner").style.display = "none";
+  };
+})();
+</script>
+
 <style>
   :root {
     --bg: #0a0908;
@@ -285,9 +323,50 @@
   footer a { color: var(--accent2); }
 
   code { color: var(--accent); }
+
+  #cookie-banner {
+    display: none;
+    position: fixed;
+    left: 0; right: 0; bottom: 0;
+    z-index: 999;
+    background: #0e0b09;
+    border-top: 2px solid var(--hazard);
+    padding: 16px 20px;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12.5px;
+    color: var(--muted);
+    box-shadow: 0 -6px 24px rgba(0,0,0,0.4);
+  }
+  #cookie-banner p { margin: 0; max-width: 52ch; color: var(--text); }
+  #cookie-banner a { color: var(--accent2); }
+  #cookie-banner .btns { display: flex; gap: 10px; flex-shrink: 0; }
+  #cookie-banner button {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    padding: 9px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 1px solid var(--line);
+  }
+  #cookie-banner .accept { background: var(--hazard); color: #0a0908; border: none; }
+  #cookie-banner .decline { background: transparent; color: var(--muted); }
 </style>
 </head>
 <body>
+
+<div id="cookie-banner">
+  <p>This site uses Google Analytics to understand traffic. No data is collected until you accept. See our <a href="/privacy/">Privacy Notice</a>.</p>
+  <div class="btns">
+    <button class="decline" onclick="declineCookies()">Decline</button>
+    <button class="accept" onclick="acceptCookies()">Accept</button>
+  </div>
+</div>
 
 <div class="ticker-wrap">
   <span class="ticker">STUCK CHARGING CABLES &nbsp;·&nbsp; NON-REFUNDABLE WALLET BALANCE &nbsp;·&nbsp; BILLED FOR SESSIONS THAT NEVER CHARGED &nbsp;·&nbsp; SUPPORT UNRESPONSIVE &nbsp;·&nbsp; CONSUMER AUTHORITY IGNORED &nbsp;·&nbsp; STUCK CHARGING CABLES &nbsp;·&nbsp; NON-REFUNDABLE WALLET BALANCE &nbsp;·&nbsp; BILLED FOR SESSIONS THAT NEVER CHARGED &nbsp;·&nbsp; SUPPORT UNRESPONSIVE &nbsp;·&nbsp; CONSUMER AUTHORITY IGNORED &nbsp;·&nbsp;</span>
@@ -396,7 +475,7 @@
 
   <footer>
     Compiled from public App Store, Google Play, and Trustpilot reviews. Not affiliated with Miio, MUVEXT LDA, or any charging network operator.<br>
-    <a href="/privacy/">Privacy Notice</a> · <a href="/legal/">Legal Notice</a> · No cookies. No tracking. No analytics.
+    <a href="/privacy/">Privacy Notice</a> · <a href="/legal/">Legal Notice</a> · <a href="#" onclick="localStorage.removeItem('cookie_consent'); location.reload(); return false;">Cookie Settings</a>
   </footer>
 
 </div>
