@@ -3,225 +3,352 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Miio EV Charging App — Read This Before You Download</title>
+<title>Miio EV Charging App Reviews & Warnings — Read Before You Download</title>
+<meta name="description" content="Documented user complaints about the Miio EV charging app: non-refundable wallet balances, billing for failed sessions, stuck charging cables, and unresponsive support in Portugal, Spain, and France.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://miioev.app/">
+<link rel="alternate" hreflang="en" href="https://miioev.app/">
+<link rel="alternate" hreflang="es" href="https://miioev.app/es/">
+<link rel="alternate" hreflang="pt" href="https://miioev.app/pt/">
+<link rel="alternate" hreflang="fr" href="https://miioev.app/fr/">
+<link rel="alternate" hreflang="x-default" href="https://miioev.app/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Miio EV Charging App — Read This Before You Download">
+<meta property="og:description" content="Documented complaints: non-refundable wallet funds, billing for failed sessions, stuck charging cables, unresponsive support.">
+<meta property="og:url" content="https://miioev.app/">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="pt_PT">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Miio EV Charging App — Read This Before You Download">
+<meta name="twitter:description" content="Documented complaints: non-refundable wallet funds, billing for failed sessions, stuck charging cables, unresponsive support.">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Miio EV Charging App — Read This Before You Download",
+  "description": "Consumer warning page summarizing documented user complaints about the Miio EV charging app.",
+  "url": "https://miioev.app/",
+  "inLanguage": "en",
+  "about": {
+    "@type": "MobileApplication",
+    "name": "Miio",
+    "applicationCategory": "Electric vehicle charging app",
+    "operatingSystem": "iOS, Android"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "miioev.app"
+  }
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=IBM+Plex+Mono:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
   :root {
-    --bg: #14100e;
-    --panel: #1c1613;
-    --accent: #e8542a;
-    --accent-dim: #a83f20;
-    --text: #f2ece5;
-    --muted: #b8ab9e;
-    --line: #34291f;
+    --bg: #0a0908;
+    --panel: #171310;
+    --panel2: #1e1815;
+    --hazard: #f5c400;
+    --accent: #ff4a1c;
+    --accent2: #ff8a3d;
+    --text: #f3ede4;
+    --muted: #a89988;
+    --line: #332a22;
+    --danger-red: #d81e1e;
   }
   * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
   body {
     margin: 0;
-    background: var(--bg);
+    background:
+      repeating-linear-gradient(0deg, rgba(255,255,255,0.012) 0px, rgba(255,255,255,0.012) 1px, transparent 1px, transparent 3px),
+      var(--bg);
     color: var(--text);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
     line-height: 1.55;
+    overflow-x: hidden;
   }
-  .wrap { max-width: 760px; margin: 0 auto; padding: 48px 24px 80px; }
-  header {
-    border-bottom: 2px solid var(--accent);
-    padding-bottom: 24px;
-    margin-bottom: 32px;
+
+  .ticker-wrap {
+    background: repeating-linear-gradient(135deg, var(--hazard) 0 18px, #171310 18px 36px);
+    border-bottom: 3px solid #000;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 7px 0;
   }
-  .tag {
+  .ticker {
     display: inline-block;
-    background: var(--accent);
-    color: #14100e;
+    padding-left: 100%;
+    animation: ticker 26s linear infinite;
+    font-family: 'IBM Plex Mono', monospace;
     font-weight: 700;
-    font-size: 12px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    padding: 4px 10px;
-    border-radius: 3px;
-    margin-bottom: 16px;
+    font-size: 12.5px;
+    letter-spacing: 0.06em;
+    color: #0a0908;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.25);
   }
+  @keyframes ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-100%); } }
+
+  .wrap { max-width: 800px; margin: 0 auto; padding: 0 24px 90px; position: relative; }
+
+  header { padding: 56px 0 34px; position: relative; }
+  .stamp {
+    position: absolute;
+    top: 40px;
+    right: 4px;
+    border: 3px solid var(--danger-red);
+    color: var(--danger-red);
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.12em;
+    padding: 6px 12px;
+    transform: rotate(9deg);
+    opacity: 0.9;
+    border-radius: 3px;
+    background: rgba(216,30,30,0.06);
+  }
+  .kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent2);
+    margin-bottom: 18px;
+  }
+  .kicker::before {
+    content: "";
+    width: 9px; height: 9px;
+    background: var(--danger-red);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--danger-red);
+    animation: blink 1.4s ease-in-out infinite;
+  }
+  @keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: 0.25; } }
+
   h1 {
-    font-size: clamp(28px, 5vw, 42px);
-    line-height: 1.15;
-    margin: 0 0 12px;
+    font-family: 'Archivo Black', 'Inter', sans-serif;
+    font-size: clamp(34px, 7vw, 58px);
+    line-height: 0.98;
+    letter-spacing: -0.01em;
+    margin: 0 0 20px;
+    max-width: 14ch;
+  }
+  h1 .hit {
+    color: var(--accent);
+    position: relative;
+    display: inline-block;
+  }
+  h1 .hit::after {
+    content: "";
+    position: absolute;
+    left: -2px; right: -2px; bottom: 6px;
+    height: 0.34em;
+    background: var(--hazard);
+    z-index: -1;
+    opacity: 0.9;
+    transform: skewX(-8deg);
   }
   .sub {
     color: var(--muted);
-    font-size: 17px;
-    max-width: 60ch;
+    font-size: 17.5px;
+    max-width: 58ch;
   }
+
+  .lang-row {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12.5px;
+    margin-bottom: 8px;
+  }
+  .lang-row span { color: var(--muted); }
+  .lang-row a { color: var(--accent2); text-decoration: none; margin-left: 6px; }
+  .lang-row a:hover { text-decoration: underline; }
+
   h2 {
-    font-size: 20px;
-    color: var(--accent);
-    border-left: 3px solid var(--accent);
-    padding-left: 12px;
-    margin: 40px 0 16px;
+    font-family: 'Archivo Black', sans-serif;
+    font-size: clamp(22px, 4vw, 30px);
+    letter-spacing: -0.01em;
+    margin: 64px 0 22px;
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
   }
+  h2 .num {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--bg);
+    background: var(--hazard);
+    padding: 3px 9px;
+    border-radius: 2px;
+    transform: rotate(-2deg);
+    flex-shrink: 0;
+  }
+
   .card {
     position: relative;
     background: var(--panel);
     border: 1px solid var(--line);
-    border-left: 3px solid var(--accent-dim);
-    border-radius: 8px;
-    padding: 20px 22px 20px 56px;
-    margin-bottom: 14px;
-    box-shadow: 0 0 0 rgba(232,84,42,0);
-    transition: box-shadow 0.2s ease;
+    padding: 24px 26px 22px;
+    margin-bottom: 20px;
+    clip-path: polygon(0 0, 97% 0, 100% 8px, 100% 100%, 3% 100%, 0 calc(100% - 8px));
   }
-  .card:hover {
-    box-shadow: 0 0 22px rgba(232,84,42,0.12);
-    border-left-color: var(--accent);
-  }
-  .card-icon {
+  .card:nth-child(odd) { transform: rotate(-0.35deg); }
+  .card:nth-child(even) { transform: rotate(0.35deg); }
+  .card::before {
+    content: "";
     position: absolute;
-    top: 18px;
-    left: 18px;
-    width: 26px;
-    height: 26px;
-    color: var(--accent);
-    opacity: 0.9;
+    left: 0; top: 0; bottom: 0;
+    width: 5px;
+    background: var(--accent);
   }
-  .card-icon svg { width: 100%; height: 100%; }
-  .quote-mark {
-    position: absolute;
-    top: 12px;
-    left: 20px;
-    font-size: 46px;
-    line-height: 1;
+  .card.danger::before { background: var(--danger-red); }
+  .card p { margin: 0; color: var(--text); font-size: 16px; }
+  .card .quote-mark {
     font-family: Georgia, serif;
-    color: var(--accent-dim);
-    opacity: 0.55;
-    user-select: none;
+    font-size: 54px;
+    line-height: 1;
+    color: var(--accent2);
+    opacity: 0.35;
+    float: left;
+    margin: -6px 8px -10px 0;
   }
-  .card p { margin: 0; color: var(--text); }
   .card .src {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    margin-top: 12px;
+    display: block;
+    margin-top: 14px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11.5px;
+    letter-spacing: 0.03em;
+    color: var(--muted);
+    text-transform: uppercase;
+    border-top: 1px dashed var(--line);
+    padding-top: 10px;
+  }
+  .badge-danger {
+    display: inline-block;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--danger-red);
+    border: 1px solid var(--danger-red);
+    padding: 2px 7px;
+    border-radius: 2px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+
+  .flag {
+    position: relative;
+    background:
+      repeating-linear-gradient(135deg, rgba(245,196,0,0.07) 0 14px, rgba(255,74,28,0.05) 14px 28px);
+    border: 2px solid var(--hazard);
+    padding: 22px 24px;
+    margin: 32px 0;
+  }
+  .flag strong { color: var(--hazard); }
+
+  ul { padding-left: 22px; }
+  li { margin-bottom: 11px; }
+
+  .cta {
+    margin-top: 56px;
+    padding: 26px 28px;
+    background: var(--panel2);
+    border: 1px dashed var(--muted);
+    text-align: left;
+    font-family: 'IBM Plex Mono', monospace;
     font-size: 13px;
     color: var(--muted);
   }
-  .src svg { width: 13px; height: 13px; flex-shrink: 0; opacity: 0.8; }
-  .section-title-row {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  .section-title-row svg { width: 22px; height: 22px; color: var(--accent); flex-shrink: 0; }
-  @keyframes pulse-warn {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.55; }
-  }
-  .danger-icon {
-    animation: pulse-warn 1.8s ease-in-out infinite;
-  }
-  .flag {
-    background: #241a12;
-    border: 1px solid var(--accent-dim);
-    border-radius: 8px;
-    padding: 18px 20px;
-    margin: 24px 0;
-  }
-  .flag strong { color: var(--accent); }
-  ul { padding-left: 20px; }
-  li { margin-bottom: 10px; }
-  .cta {
-    margin-top: 44px;
-    padding: 24px;
-    background: var(--panel);
-    border-radius: 8px;
-    border: 1px solid var(--line);
-    text-align: center;
-  }
-  .cta a {
-    display: inline-block;
-    margin-top: 12px;
-    background: var(--accent);
-    color: #14100e;
-    font-weight: 700;
-    text-decoration: none;
-    padding: 12px 22px;
-    border-radius: 6px;
-  }
+
   footer {
     margin-top: 60px;
     color: var(--muted);
-    font-size: 13px;
+    font-size: 12.5px;
     border-top: 1px solid var(--line);
-    padding-top: 20px;
+    padding-top: 22px;
+    font-family: 'IBM Plex Mono', monospace;
+    line-height: 1.9;
   }
+  footer a { color: var(--accent2); }
+
   code { color: var(--accent); }
 </style>
 </head>
 <body>
+
+<div class="ticker-wrap">
+  <span class="ticker">STUCK CHARGING CABLES &nbsp;·&nbsp; NON-REFUNDABLE WALLET BALANCE &nbsp;·&nbsp; BILLED FOR SESSIONS THAT NEVER CHARGED &nbsp;·&nbsp; SUPPORT UNRESPONSIVE &nbsp;·&nbsp; CONSUMER AUTHORITY IGNORED &nbsp;·&nbsp; STUCK CHARGING CABLES &nbsp;·&nbsp; NON-REFUNDABLE WALLET BALANCE &nbsp;·&nbsp; BILLED FOR SESSIONS THAT NEVER CHARGED &nbsp;·&nbsp; SUPPORT UNRESPONSIVE &nbsp;·&nbsp; CONSUMER AUTHORITY IGNORED &nbsp;·&nbsp;</span>
+</div>
+
 <div class="wrap">
 
+  <div class="lang-row">
+    <span>ALSO IN:</span>
+    <a href="/es/">ES</a>
+    <a href="/pt/">PT</a>
+    <a href="/fr/">FR</a>
+  </div>
+
   <header>
-    <span class="tag">Consumer warning</span>
-    <h1>Before you download the Miio EV charging app — read the reviews first.</h1>
+    <span class="stamp">DOCUMENTED</span>
+    <div class="kicker">Consumer warning · live tracking</div>
+    <h1>Before you download Miio, <span class="hit">read this.</span></h1>
     <p class="sub">Miio (used across Portugal, Spain, and France) has a documented pattern of complaints about non-refundable prepaid balances, billing for sessions that never actually charged, and unresponsive support — including a case where the Portuguese Consumer Authority couldn't get a refund issued.</p>
   </header>
 
-  <h2>
-    <span class="section-title-row">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-      What's actually documented
-    </span>
-  </h2>
+  <h2><span class="num">01</span> What's actually documented</h2>
 
   <div class="card">
     <span class="quote-mark">&#8220;</span>
     <p>Miio doesn't charge per kWh at the point of use — it deducts from a prepaid "wallet." Users report that unused wallet funds are effectively non-refundable and can only be spent inside the app, even after the rental car or trip is long over.</p>
-    <span class="src">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
-      Source: user complaint, travelinti.com (2025)
-    </span>
+    <span class="src">Source — user complaint, travelinti.com (2025)</span>
   </div>
 
-  <div class="card">
-    <span class="card-icon danger-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></span>
+  <div class="card danger">
+    <span class="badge-danger">Billed without charging</span>
     <p>A user reported the app showed "not connected, not charging" for an entire session, tried for 40+ minutes to stop it through every method available, and was still invoiced for the session afterward. Miio's own support reportedly acknowledged similar cases from other users.</p>
-    <span class="src">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
-      Source: App Store review, apps.apple.com/miio
-    </span>
+    <span class="src">Source — App Store review, apps.apple.com/miio</span>
   </div>
 
-  <div class="card">
-    <span class="card-icon danger-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></span>
+  <div class="card danger">
+    <span class="badge-danger">Refund promised, never paid</span>
     <p>A Trustpilot reviewer paid Miio to activate a charger that turned out to be non-functional, was told by Miio's own helpline they were aware of the fault, and received written agreement from Miio to refund the payment — which was never actually paid out. The Portuguese Consumer Authority contacted Miio on the customer's behalf and reportedly got no response either.</p>
-    <span class="src">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
-      Source: Trustpilot review of miio.com
-    </span>
+    <span class="src">Source — Trustpilot review of miio.com</span>
   </div>
 
   <div class="card">
     <span class="quote-mark">&#8220;</span>
     <p>Multiple reviewers describe being charged more than the energy actually delivered (one cites a charge of €12.50 for a session their car's own app measured at 7.7 kW), and describe support as effectively unreachable — invalid contact email, no resolution after hours of waiting.</p>
-    <span class="src">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
-      Source: App Store &amp; justuseapp.com aggregated reviews
-    </span>
+    <span class="src">Source — App Store &amp; justuseapp.com aggregated reviews</span>
   </div>
 
   <div class="flag">
-    <span style="display:flex; gap:12px; align-items:flex-start;">
-      <svg class="danger-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:24px;height:24px;color:var(--accent);flex-shrink:0;margin-top:2px;"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-      <span><strong>On the "locks your car" concern:</strong> I couldn't independently verify that Miio specifically causes a car to become locked or undriveable. What is documented — including in Miio's own App Store changelog — is a pattern of "stuck cable" issues, where the charging cable itself won't release from the vehicle. This is a known failure mode across several EV charging apps (not unique to Miio) and is usually caused by a session the app thinks is still active, a communication glitch with the charging station, or a frozen/faulty latch — not necessarily the app deliberately locking anything. If you've experienced your car being immobilized rather than just a stuck cable, that's worth reporting directly, since it goes beyond what's publicly documented.</span>
-    </span>
+    <strong>USE AT YOUR OWN RISK.</strong> Miio's own App Store changelog acknowledges "stuck cables" as a known issue — the charging cable itself can fail to release from your vehicle after a session, leaving your car physically tethered to the station. Reports also describe being billed for sessions the app itself showed as "not charging."
   </div>
 
-  <h2>If you're stuck with a cable that won't release</h2>
+  <h2><span class="num">02</span> Cable won't release</h2>
   <ul>
     <li>Confirm the session is actually stopped in the app — not just showing "not charging."</li>
     <li>Try locking, then unlocking the car with the key fob (releases many stuck latches).</li>
-    <li>Check your vehicle's manual for the manual/emergency cable release, often in the trunk near the charge port.</li>
+    <li>Miio's official guidance is to call the charging station operator, whose number is supposed to be posted on the station itself — but reviewers report that number is often missing, wrong, or unanswered.</li>
+    <li>Check your vehicle's manual for the manual/emergency cable release, often in the trunk near the charge port — note that few public charging stations offer a manual override on their end, so this is usually the more reliable fallback.</li>
     <li>Don't force the connector — it's a common way to damage the charge port itself.</li>
   </ul>
 
-  <h2>If you've already lost money to Miio</h2>
+  <h2><span class="num">03</span> Already lost money</h2>
   <ul>
     <li>Screenshot everything: the session, the charge, any support replies.</li>
     <li>Dispute the charge with your card issuer/bank directly — this tends to get faster results than app support.</li>
@@ -229,46 +356,47 @@
     <li>Leave a dated, factual review (App Store, Google Play, Trustpilot) — it's part of what surfaced the pattern above.</li>
   </ul>
 
-  <h2>Report the app to Apple / Google</h2>
+  <h2><span class="num">04</span> Report it to Apple / Google</h2>
 
   <div class="card">
     <p><strong>Apple App Store</strong> — reports go through Apple's dedicated problem-reporting site, separate from a normal review.</p>
-    <ol style="margin:12px 0 0; padding-left:20px; color:var(--text);">
-      <li>Go to <a href="https://reportaproblem.apple.com" style="color:var(--accent);" target="_blank" rel="noopener">reportaproblem.apple.com</a> and sign in with the Apple ID you used.</li>
+    <ol style="margin:14px 0 0; padding-left:20px; color:var(--text);">
+      <li>Go to <a href="https://reportaproblem.apple.com" style="color:var(--accent2);" target="_blank" rel="noopener">reportaproblem.apple.com</a> and sign in with the Apple ID you used.</li>
       <li>Click <strong>"I'd like to"</strong> and choose <strong>"Report a scam or fraud"</strong> (use "Report a quality issue" if you didn't lose money, just had a bad experience).</li>
       <li>Select the Miio app from your purchase/download history, describe what happened, and submit.</li>
       <li>If you also lost money on an in-app purchase (wallet top-up), you can separately choose <strong>"Request a refund"</strong> in the same "I'd like to" menu.</li>
     </ol>
-    <span class="src">App listing: <a href="https://apps.apple.com/us/app/miio/id1462182013" style="color:var(--muted);" target="_blank" rel="noopener">apps.apple.com/miio</a> · Official guidance: <a href="https://support.apple.com/en-us/122712" style="color:var(--muted);" target="_blank" rel="noopener">support.apple.com/122712</a></span>
+    <span class="src">App listing: apps.apple.com/miio · Official guidance: support.apple.com/122712</span>
   </div>
 
   <div class="card">
     <p><strong>Google Play Store</strong> — flagging is built into the app listing itself.</p>
-    <ol style="margin:12px 0 0; padding-left:20px; color:var(--text);">
-      <li>Open the Miio listing: <a href="https://play.google.com/store/apps/details?id=com.muvext.miio" style="color:var(--accent);" target="_blank" rel="noopener">play.google.com/store/apps/details?id=com.muvext.miio</a></li>
+    <ol style="margin:14px 0 0; padding-left:20px; color:var(--text);">
+      <li>Open the Miio listing: <a href="https://play.google.com/store/apps/details?id=com.muvext.miio" style="color:var(--accent2);" target="_blank" rel="noopener">play.google.com/store/apps/details?id=com.muvext.miio</a></li>
       <li>Tap the <strong>three-dot menu (⋮)</strong> near the top of the listing.</li>
       <li>Select <strong>"Flag as inappropriate."</strong></li>
       <li>Choose the closest reason — <strong>"Harmful to device or data"</strong> if you believe there's a technical/security issue, or <strong>"Other objection"</strong> for billing/fraud complaints — and add details.</li>
       <li>Submit. Google won't send an individual reply, but flags feed into their review process.</li>
     </ol>
-    <span class="src">Official guidance: <a href="https://support.google.com/googleplay/answer/2853570" style="color:var(--muted);" target="_blank" rel="noopener">support.google.com/googleplay/answer/2853570</a></span>
+    <span class="src">Official guidance: support.google.com/googleplay/answer/2853570</span>
   </div>
 
   <div class="card">
     <p><strong>Also worth doing, in parallel:</strong></p>
     <ul style="margin:8px 0 0;">
       <li>Leave a dated, factual written review on the app's store page — reviews carry more public weight than a backend flag.</li>
-      <li>If you're in Portugal: file with <a href="https://www.livroreclamacoes.pt" style="color:var(--accent);" target="_blank" rel="noopener">Livro de Reclamações</a> or <a href="https://www.deco.proteste.pt" style="color:var(--accent);" target="_blank" rel="noopener">DECO</a>.</li>
+      <li>If you're in Portugal: file with <a href="https://www.livroreclamacoes.pt" style="color:var(--accent2);" target="_blank" rel="noopener">Livro de Reclamações</a> or <a href="https://www.deco.proteste.pt" style="color:var(--accent2);" target="_blank" rel="noopener">DECO</a>.</li>
       <li>Dispute the charge directly with your card issuer — chargebacks tend to move faster than any app-store report.</li>
     </ul>
   </div>
 
   <div class="cta">
-    <p>This page summarizes publicly available user reports as of September 2026. It isn't a legal filing or an official investigation — treat it as "read before you download," not a final verdict.</p>
+    &gt; This page summarizes publicly available user reports as of September 2026. It isn't a legal filing or an official investigation — treat it as "read before you download," not a final verdict.
   </div>
 
   <footer>
-    Compiled from public App Store, Google Play, and Trustpilot reviews. Not affiliated with Miio, MUVEXT LDA, or any charging network operator.
+    Compiled from public App Store, Google Play, and Trustpilot reviews. Not affiliated with Miio, MUVEXT LDA, or any charging network operator.<br>
+    <a href="/privacy/">Privacy Notice</a> · <a href="/legal/">Legal Notice</a> · No cookies. No tracking. No analytics.
   </footer>
 
 </div>

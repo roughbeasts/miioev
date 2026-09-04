@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>App Miio de Carregamento Elétrico — Leia Antes de Descarregar</title>
+<meta name="description" content="Queixas documentadas sobre a app Miio de carregamento de veículos elétricos: saldo pré-pago não reembolsável, cobranças por sessões falhadas, cabos presos e apoio ao cliente inacessível em Portugal, Espanha e França.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://miioev.app/pt/">
+<link rel="alternate" hreflang="en" href="https://miioev.app/">
+<link rel="alternate" hreflang="es" href="https://miioev.app/es/">
+<link rel="alternate" hreflang="pt" href="https://miioev.app/pt/">
+<link rel="alternate" hreflang="fr" href="https://miioev.app/fr/">
+<link rel="alternate" hreflang="x-default" href="https://miioev.app/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="App Miio de Carregamento Elétrico — Leia Antes de Descarregar">
+<meta property="og:description" content="Queixas documentadas: saldo pré-pago não reembolsável, cobranças por sessões falhadas, cabos presos, apoio ao cliente inacessível.">
+<meta property="og:url" content="https://miioev.app/pt/">
+<meta property="og:locale" content="pt_PT">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "App Miio de Carregamento Elétrico — Leia Antes de Descarregar",
+  "description": "Página de aviso ao consumidor com queixas documentadas sobre a app Miio de carregamento de veículos elétricos.",
+  "url": "https://miioev.app/pt/",
+  "inLanguage": "pt-PT",
+  "about": { "@type": "MobileApplication", "name": "Miio", "applicationCategory": "App de carregamento de veículos elétricos", "operatingSystem": "iOS, Android" },
+  "publisher": { "@type": "Organization", "name": "miioev.app" }
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=IBM+Plex+Mono:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --bg:#0a0908; --panel:#171310; --panel2:#1e1815; --hazard:#f5c400; --accent:#ff4a1c; --accent2:#ff8a3d; --text:#f3ede4; --muted:#a89988; --line:#332a22; --danger-red:#d81e1e; }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin:0; background: repeating-linear-gradient(0deg, rgba(255,255,255,0.012) 0px, rgba(255,255,255,0.012) 1px, transparent 1px, transparent 3px), var(--bg); color:var(--text); font-family:'Inter',-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif; line-height:1.55; overflow-x:hidden; }
+  .ticker-wrap { background: repeating-linear-gradient(135deg, var(--hazard) 0 18px, #171310 18px 36px); border-bottom:3px solid #000; overflow:hidden; white-space:nowrap; padding:7px 0; }
+  .ticker { display:inline-block; padding-left:100%; animation: ticker 26s linear infinite; font-family:'IBM Plex Mono',monospace; font-weight:700; font-size:12.5px; letter-spacing:0.06em; color:#0a0908; text-shadow:0 1px 0 rgba(255,255,255,0.25); }
+  @keyframes ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-100%); } }
+  .wrap { max-width:800px; margin:0 auto; padding:0 24px 90px; position:relative; }
+  header { padding:56px 0 34px; position:relative; }
+  .stamp { position:absolute; top:40px; right:4px; border:3px solid var(--danger-red); color:var(--danger-red); font-family:'IBM Plex Mono',monospace; font-weight:700; font-size:13px; letter-spacing:0.12em; padding:6px 12px; transform:rotate(9deg); opacity:0.9; border-radius:3px; background:rgba(216,30,30,0.06); }
+  .kicker { display:inline-flex; align-items:center; gap:8px; font-family:'IBM Plex Mono',monospace; font-size:12px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:var(--accent2); margin-bottom:18px; }
+  .kicker::before { content:""; width:9px; height:9px; background:var(--danger-red); border-radius:50%; box-shadow:0 0 10px var(--danger-red); animation: blink 1.4s ease-in-out infinite; }
+  @keyframes blink { 0%,100% { opacity:1; } 50% { opacity:0.25; } }
+  h1 { font-family:'Archivo Black','Inter',sans-serif; font-size:clamp(32px,7vw,54px); line-height:0.98; letter-spacing:-0.01em; margin:0 0 20px; max-width:15ch; }
+  h1 .hit { color:var(--accent); position:relative; display:inline-block; }
+  h1 .hit::after { content:""; position:absolute; left:-2px; right:-2px; bottom:6px; height:0.34em; background:var(--hazard); z-index:-1; opacity:0.9; transform:skewX(-8deg); }
+  .sub { color:var(--muted); font-size:17.5px; max-width:58ch; }
+  .lang-row { font-family:'IBM Plex Mono',monospace; font-size:12.5px; margin-bottom:8px; }
+  .lang-row span { color:var(--muted); }
+  .lang-row a { color:var(--accent2); text-decoration:none; margin-left:6px; }
+  .lang-row a:hover { text-decoration:underline; }
+  h2 { font-family:'Archivo Black',sans-serif; font-size:clamp(20px,4vw,28px); letter-spacing:-0.01em; margin:64px 0 22px; display:flex; align-items:baseline; gap:14px; }
+  h2 .num { font-family:'IBM Plex Mono',monospace; font-size:15px; font-weight:700; color:var(--bg); background:var(--hazard); padding:3px 9px; border-radius:2px; transform:rotate(-2deg); flex-shrink:0; }
+  .card { position:relative; background:var(--panel); border:1px solid var(--line); padding:24px 26px 22px; margin-bottom:20px; clip-path:polygon(0 0,97% 0,100% 8px,100% 100%,3% 100%,0 calc(100% - 8px)); }
+  .card:nth-child(odd) { transform:rotate(-0.35deg); }
+  .card:nth-child(even) { transform:rotate(0.35deg); }
+  .card::before { content:""; position:absolute; left:0; top:0; bottom:0; width:5px; background:var(--accent); }
+  .card.danger::before { background:var(--danger-red); }
+  .card p { margin:0; color:var(--text); font-size:16px; }
+  .card .quote-mark { font-family:Georgia,serif; font-size:54px; line-height:1; color:var(--accent2); opacity:0.35; float:left; margin:-6px 8px -10px 0; }
+  .card .src { display:block; margin-top:14px; font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:0.03em; color:var(--muted); text-transform:uppercase; border-top:1px dashed var(--line); padding-top:10px; }
+  .badge-danger { display:inline-block; font-family:'IBM Plex Mono',monospace; font-size:10.5px; font-weight:700; letter-spacing:0.1em; color:var(--danger-red); border:1px solid var(--danger-red); padding:2px 7px; border-radius:2px; margin-bottom:10px; text-transform:uppercase; }
+  .flag { position:relative; background: repeating-linear-gradient(135deg, rgba(245,196,0,0.07) 0 14px, rgba(255,74,28,0.05) 14px 28px); border:2px solid var(--hazard); padding:22px 24px; margin:32px 0; }
+  .flag strong { color:var(--hazard); }
+  ul { padding-left:22px; }
+  li { margin-bottom:11px; }
+  .cta { margin-top:56px; padding:26px 28px; background:var(--panel2); border:1px dashed var(--muted); font-family:'IBM Plex Mono',monospace; font-size:13px; color:var(--muted); }
+  footer { margin-top:60px; color:var(--muted); font-size:12.5px; border-top:1px solid var(--line); padding-top:22px; font-family:'IBM Plex Mono',monospace; line-height:1.9; }
+  footer a { color:var(--accent2); }
+</style>
+</head>
+<body>
+
+<div class="ticker-wrap">
+  <span class="ticker">CABOS DE CARREGAMENTO PRESOS &nbsp;·&nbsp; SALDO DA CARTEIRA NÃO REEMBOLSÁVEL &nbsp;·&nbsp; COBRADO POR SESSÕES QUE NUNCA CARREGARAM &nbsp;·&nbsp; APOIO AO CLIENTE SEM RESPOSTA &nbsp;·&nbsp; AUTORIDADE DE CONSUMO IGNORADA &nbsp;·&nbsp; CABOS DE CARREGAMENTO PRESOS &nbsp;·&nbsp; SALDO DA CARTEIRA NÃO REEMBOLSÁVEL &nbsp;·&nbsp; COBRADO POR SESSÕES QUE NUNCA CARREGARAM &nbsp;·&nbsp; APOIO AO CLIENTE SEM RESPOSTA &nbsp;·&nbsp;</span>
+</div>
+
+<div class="wrap">
+
+  <div class="lang-row">
+    <span>TAMBÉM EM:</span>
+    <a href="/">EN</a>
+    <a href="/es/">ES</a>
+    <a href="/fr/">FR</a>
+  </div>
+
+  <header>
+    <span class="stamp">DOCUMENTADO</span>
+    <div class="kicker">Aviso ao consumidor · acompanhamento ativo</div>
+    <h1>Antes de descarregar a Miio, <span class="hit">leia isto.</span></h1>
+    <p class="sub">A Miio (usada em Portugal, Espanha e França) tem um padrão documentado de queixas sobre saldos pré-pagos não reembolsáveis, cobranças por sessões que nunca chegaram a carregar, e apoio ao cliente que não responde — incluindo um caso em que a Direção-Geral do Consumidor não conseguiu que fosse feito um reembolso.</p>
+  </header>
+
+  <h2><span class="num">01</span> O que está efetivamente documentado</h2>
+
+  <div class="card">
+    <span class="quote-mark">&#8220;</span>
+    <p>A Miio não cobra por kWh no momento do carregamento — deduz de uma "carteira" pré-paga. Utilizadores relatam que os fundos não utilizados nessa carteira são, na prática, não reembolsáveis e só podem ser gastos dentro da app, mesmo depois de terminada a viagem ou o aluguer do carro.</p>
+    <span class="src">Fonte — queixa de utilizador, travelinti.com (2025)</span>
+  </div>
+
+  <div class="card danger">
+    <span class="badge-danger">Cobrado sem carregar</span>
+    <p>Um utilizador relatou que a app mostrava "não ligado, não a carregar" durante toda a sessão, tentou durante mais de 40 minutos parar a sessão por todos os métodos disponíveis, e ainda assim foi cobrado pela sessão. O próprio apoio ao cliente da Miio reconheceu, ao que consta, casos semelhantes com outros utilizadores.</p>
+    <span class="src">Fonte — avaliação na App Store, apps.apple.com/miio</span>
+  </div>
+
+  <div class="card danger">
+    <span class="badge-danger">Reembolso prometido, nunca pago</span>
+    <p>Um utilizador no Trustpilot pagou à Miio para ativar um carregador que se revelou avariado, foi informado pela própria linha de apoio da Miio de que já sabiam do problema, e recebeu um acordo por escrito da Miio para reembolsar o pagamento — reembolso esse que nunca chegou a ser feito. A Direção-Geral do Consumidor contactou a Miio em nome do cliente e, ao que consta, também não obteve resposta.</p>
+    <span class="src">Fonte — avaliação no Trustpilot de miio.com</span>
+  </div>
+
+  <div class="card">
+    <span class="quote-mark">&#8220;</span>
+    <p>Vários utilizadores descrevem terem sido cobrados mais do que a energia efetivamente entregue (um caso cita uma cobrança de 12,50€ por uma sessão que a própria app do carro mediu em 7,7 kW), e descrevem o apoio ao cliente como praticamente inacessível — email de contacto inválido, sem resolução após horas de espera.</p>
+    <span class="src">Fonte — avaliações agregadas da App Store e justuseapp.com</span>
+  </div>
+
+  <div class="flag">
+    <strong>USE POR SUA CONTA E RISCO.</strong> O próprio registo de atualizações da app Miio na App Store reconhece "cabos presos" como um problema conhecido — o cabo de carregamento pode não se soltar do veículo depois de uma sessão, deixando o carro fisicamente preso à estação. Há também relatos de cobranças por sessões que a própria app mostrava como "não a carregar."
+  </div>
+
+  <h2><span class="num">02</span> Cabo preso que não se solta</h2>
+  <ul>
+    <li>Confirme que a sessão foi realmente terminada na app — não apenas que mostra "não a carregar."</li>
+    <li>Tente trancar e depois destrancar o carro com o comando (resolve muitos casos de fecho preso).</li>
+    <li>A orientação oficial da Miio é ligar para o operador da estação de carregamento, cujo número deveria estar afixado na própria estação — mas os utilizadores relatam que esse número está muitas vezes em falta, errado ou sem resposta.</li>
+    <li>Consulte o manual do veículo para localizar a libertação manual/de emergência do cabo, normalmente na bagageira junto à tomada de carregamento — note que poucas estações públicas de carregamento oferecem uma anulação manual do lado delas, pelo que isto costuma ser a alternativa mais fiável.</li>
+    <li>Não force o conector — é uma forma comum de danificar a própria tomada de carregamento.</li>
+  </ul>
+
+  <h2><span class="num">03</span> Já perdeu dinheiro</h2>
+  <ul>
+    <li>Tire capturas de ecrã de tudo: a sessão, a cobrança, quaisquer respostas do apoio ao cliente.</li>
+    <li>Conteste a cobrança diretamente junto do seu banco/emissor do cartão — costuma dar resultados mais rápidos do que o apoio da app.</li>
+    <li>Em Portugal, pode apresentar queixa junto da <strong>DECO</strong> (Associação Portuguesa para a Defesa do Consumidor) ou da <strong>Direção-Geral do Consumidor</strong>.</li>
+    <li>Deixe uma avaliação escrita, datada e factual (App Store, Google Play, Trustpilot) — foi assim que este padrão de queixas veio à tona.</li>
+  </ul>
+
+  <h2><span class="num">04</span> Denunciar à Apple / Google</h2>
+
+  <div class="card">
+    <p><strong>Apple App Store</strong> — as denúncias são feitas através do site próprio da Apple para reportar problemas, separado de uma avaliação normal.</p>
+    <ol style="margin:14px 0 0; padding-left:20px; color:var(--text);">
+      <li>Aceda a <a href="https://reportaproblem.apple.com" style="color:var(--accent2);" target="_blank" rel="noopener">reportaproblem.apple.com</a> e inicie sessão com o Apple ID que utilizou.</li>
+      <li>Clique em <strong>"I'd like to"</strong> e escolha <strong>"Report a scam or fraud"</strong> (use "Report a quality issue" se não perdeu dinheiro, apenas teve uma má experiência).</li>
+      <li>Selecione a app Miio no seu histórico de compras/descargas, descreva o que aconteceu e submeta.</li>
+      <li>Se também perdeu dinheiro numa compra dentro da app (carregamento da carteira), pode ainda escolher <strong>"Request a refund"</strong> no mesmo menu "I'd like to".</li>
+    </ol>
+    <span class="src">Página da app: apps.apple.com/miio · Orientação oficial: support.apple.com/122712</span>
+  </div>
+
+  <div class="card">
+    <p><strong>Google Play Store</strong> — a denúncia está integrada na própria página da app.</p>
+    <ol style="margin:14px 0 0; padding-left:20px; color:var(--text);">
+      <li>Abra a página da Miio: <a href="https://play.google.com/store/apps/details?id=com.muvext.miio" style="color:var(--accent2);" target="_blank" rel="noopener">play.google.com/store/apps/details?id=com.muvext.miio</a></li>
+      <li>Toque no <strong>menu de três pontos (⋮)</strong> perto do topo da página.</li>
+      <li>Selecione <strong>"Sinalizar como inadequado."</strong></li>
+      <li>Escolha o motivo mais próximo — <strong>"Prejudicial ao dispositivo ou aos dados"</strong> se acredita que existe um problema técnico/de segurança, ou <strong>"Outro motivo"</strong> para queixas de faturação/fraude — e acrescente detalhes.</li>
+      <li>Submeta. A Google não envia resposta individual, mas as sinalizações alimentam o processo de revisão deles.</li>
+    </ol>
+    <span class="src">Orientação oficial: support.google.com/googleplay/answer/2853570</span>
+  </div>
+
+  <div class="card">
+    <p><strong>Também vale a pena fazer, em paralelo:</strong></p>
+    <ul style="margin:8px 0 0;">
+      <li>Deixe uma avaliação escrita, datada e factual na página da app — as avaliações têm mais peso público do que uma sinalização interna.</li>
+      <li>Se estiver em Portugal: apresente queixa no <a href="https://www.livroreclamacoes.pt" style="color:var(--accent2);" target="_blank" rel="noopener">Livro de Reclamações</a> ou na <a href="https://www.deco.proteste.pt" style="color:var(--accent2);" target="_blank" rel="noopener">DECO</a>.</li>
+      <li>Conteste a cobrança diretamente junto do emissor do seu cartão — os estornos costumam ser mais rápidos do que qualquer denúncia nas lojas de aplicações.</li>
+    </ul>
+  </div>
+
+  <div class="cta">
+    &gt; Esta página resume avaliações de utilizadores publicamente disponíveis, referentes a setembro de 2026. Não é uma queixa formal nem uma investigação oficial — encare-a como "leia antes de descarregar", não como um veredicto final.
+  </div>
+
+  <footer>
+    Compilado a partir de avaliações públicas da App Store, Google Play e Trustpilot. Sem afiliação com a Miio, a MUVEXT LDA, ou qualquer operador de rede de carregamento.<br>
+    <a href="/privacy/">Aviso de Privacidade</a> · <a href="/legal/">Aviso Legal</a> (EN) · Sem cookies. Sem rastreamento. Sem análises.
+  </footer>
+
+</div>
+</body>
+</html>
