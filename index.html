@@ -100,6 +100,7 @@
     --muted: #a89988;
     --line: #332a22;
     --danger-red: #d81e1e;
+    --resolve: #34c471;
   }
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
@@ -252,6 +253,20 @@
     background: var(--accent);
   }
   .card.danger::before { background: var(--danger-red); }
+  .card.resolved::before { background: var(--resolve); }
+  .badge-resolved {
+    display: inline-block;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--resolve);
+    border: 1px solid var(--resolve);
+    padding: 2px 7px;
+    border-radius: 2px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
   .card p { margin: 0; color: var(--text); font-size: 16px; }
   .card .quote-mark {
     font-family: Georgia, serif;
@@ -434,6 +449,18 @@
     <li>In Portugal, you can file with <strong>DECO</strong> (Associação Portuguesa para a Defesa do Consumidor) or the <strong>Direção-Geral do Consumidor</strong>.</li>
     <li>Leave a dated, factual review (App Store, Google Play, Trustpilot) — it's part of what surfaced the pattern above.</li>
   </ul>
+
+  <div class="card resolved">
+    <span class="badge-resolved">This actually got a refund</span>
+    <p><strong>Watch for a delayed charge.</strong> One resolved case: a charge appeared on the account several days after the person had tried (and seemingly failed) to use a charger. That delay is a real pattern — it usually means a communication/sync issue between the charging station operator and Miio's backend, not a normal transaction. Because the charge doesn't register as an active or clearly failed session on Miio's side in real time, it's genuinely hard for their own team to spot on their end too.</p>
+    <p style="margin-top:14px;">If this matches your situation, when you contact support:</p>
+    <ul style="margin:10px 0 0;">
+      <li>Say plainly that you believe this is a <strong>communication delay between the charging station operator and Miio</strong>, not a standard charge.</li>
+      <li>Ask them directly to <strong>investigate the gap</strong> between when you attempted to charge and when the charge actually posted.</li>
+      <li>Point out that <strong>neither you nor Miio were aware</strong> the charge was being processed at the time it happened — that's the basis for requesting a refund, not just dissatisfaction with the service.</li>
+      <li>Expect to have to stay on it. One person's case took roughly <strong>30 back-and-forth messages</strong> before it resulted in a full refund — persistence mattered more than any single message.</li>
+    </ul>
+  </div>
 
   <h2><span class="num">04</span> Report it to Apple / Google</h2>
 

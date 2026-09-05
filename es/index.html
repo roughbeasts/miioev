@@ -66,7 +66,7 @@
 })();
 </script>
 <style>
-  :root { --bg:#0a0908; --panel:#171310; --panel2:#1e1815; --hazard:#f5c400; --accent:#ff4a1c; --accent2:#ff8a3d; --text:#f3ede4; --muted:#a89988; --line:#332a22; --danger-red:#d81e1e; }
+  :root { --bg:#0a0908; --panel:#171310; --panel2:#1e1815; --hazard:#f5c400; --accent:#ff4a1c; --accent2:#ff8a3d; --text:#f3ede4; --muted:#a89988; --line:#332a22; --danger-red:#d81e1e; --resolve:#34c471; }
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
   body { margin:0; background: repeating-linear-gradient(0deg, rgba(255,255,255,0.012) 0px, rgba(255,255,255,0.012) 1px, transparent 1px, transparent 3px), var(--bg); color:var(--text); font-family:'Inter',-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif; line-height:1.55; overflow-x:hidden; }
@@ -98,6 +98,8 @@
   .card .quote-mark { font-family:Georgia,serif; font-size:54px; line-height:1; color:var(--accent2); opacity:0.35; float:left; margin:-6px 8px -10px 0; }
   .card .src { display:block; margin-top:14px; font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:0.03em; color:var(--muted); text-transform:uppercase; border-top:1px dashed var(--line); padding-top:10px; }
   .badge-danger { display:inline-block; font-family:'IBM Plex Mono',monospace; font-size:10.5px; font-weight:700; letter-spacing:0.1em; color:var(--danger-red); border:1px solid var(--danger-red); padding:2px 7px; border-radius:2px; margin-bottom:10px; text-transform:uppercase; }
+  .card.resolved::before { background:var(--resolve); }
+  .badge-resolved { display:inline-block; font-family:'IBM Plex Mono',monospace; font-size:10.5px; font-weight:700; letter-spacing:0.1em; color:var(--resolve); border:1px solid var(--resolve); padding:2px 7px; border-radius:2px; margin-bottom:10px; text-transform:uppercase; }
   .flag { position:relative; background: repeating-linear-gradient(135deg, rgba(245,196,0,0.07) 0 14px, rgba(255,74,28,0.05) 14px 28px); border:2px solid var(--hazard); padding:22px 24px; margin:32px 0; }
   .flag strong { color:var(--hazard); }
   ul { padding-left:22px; }
@@ -190,6 +192,18 @@
     <li>En Portugal, puedes presentar una queja ante <strong>DECO</strong> (Associação Portuguesa para a Defesa do Consumidor) o la <strong>Direção-Geral do Consumidor</strong>.</li>
     <li>Deja una reseña escrita, fechada y factual (App Store, Google Play, Trustpilot) — así fue como salió a la luz este patrón de quejas.</li>
   </ul>
+
+  <div class="card resolved">
+    <span class="badge-resolved">Esto sí consiguió un reembolso</span>
+    <p><strong>Presta atención a un cobro con retraso.</strong> Un caso resuelto: apareció un cobro en la cuenta varios días después de que la persona intentara (aparentemente sin éxito) usar un cargador. Ese retraso es un patrón real — normalmente significa un problema de comunicación/sincronización entre el operador de la estación de recarga y el sistema interno de Miio, no una transacción normal. Como el cobro no queda registrado como una sesión activa o claramente fallida en el lado de Miio en tiempo real, es genuinamente difícil de detectar incluso para su propio equipo.</p>
+    <p style="margin-top:14px;">Si esto coincide con tu situación, al contactar con soporte:</p>
+    <ul style="margin:10px 0 0;">
+      <li>Di claramente que crees que se trata de un <strong>retraso de comunicación entre el operador de la estación y Miio</strong>, no un cobro normal.</li>
+      <li>Pide directamente que <strong>investiguen el intervalo</strong> entre el intento de recarga y el momento en que el cobro se procesó realmente.</li>
+      <li>Señala que <strong>ni tú ni Miio erais conscientes</strong> de que se estaba procesando el cobro en el momento en que ocurrió — esa es la base para pedir un reembolso, no solo insatisfacción con el servicio.</li>
+      <li>Prepárate para insistir. Un caso tardó unos <strong>30 mensajes de ida y vuelta</strong> antes de resultar en un reembolso completo — la persistencia importó más que cualquier mensaje concreto.</li>
+    </ul>
+  </div>
 
   <h2><span class="num">04</span> Reportar a Apple / Google</h2>
 
